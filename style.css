@@ -1,0 +1,205 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /*pq que quando coloca flex-end tbm fica na posisao no final*/
+}
+
+#header {
+  margin: auto;
+}
+
+nav {
+  background: #f1bf00;
+  margin: 20px 60px 0px 0px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+a {
+  text-decoration: none;
+  color: #aa151b;
+}
+
+a:hover {
+  color: white;
+}
+
+h1 {
+  font-size: 75px;
+  color: #f1bf00;
+}
+
+h1 span {
+  color: #aa151b;
+  background: #f1bf00;
+}
+
+.details {
+  max-width: 20%;
+  margin: 10px auto;
+  display: flex;
+}
+
+.details div {
+  height: 10px;
+  width: 30px;
+  margin: 0px 5px;
+}
+
+.d1 {
+  background: #aa151b;
+  border-radius: 5px;
+}
+
+.d2 {
+  background: #f1bf00;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.d3 {
+  background: #aa151b;
+  border-radius: 5px;
+  flex-grow: 2;
+}
+
+#presentation {
+  max-width: 95%;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+#presentation li {
+  background: #f1bf00;
+  color: #aa151b;
+  border-radius: 5px;
+  list-style: none;
+  width: 28%;
+  padding: 30px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 200; /*pesquisar sobre */
+}
+
+#presentation li:nth-child(2) {
+  align-self: flex-end;
+}
+#presentation li:nth-child(3) {
+  align-self: flex-end;
+}
+
+#cakes {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#cakes div img {
+  height: 260px;
+  object-fit: cover; /*Em cada imagem <img> foi aplicado "object-fit: cover". Como as imagens podem ter tamanhos diferentes, esta propriedade, combinada com este valor, ajusta o tamanho do elemento para preencher o contêiner, mantendo a proporção original e cortando o conteúdo se necessário, de forma a cobrir completamente a área do contêiner.*/
+}
+
+.img1,
+.img3 {
+  border: 5px solid #f1bf00;
+  border-radius: 20px;
+}
+
+.img2 {
+  border: 5px solid #aa151b;
+  border-radius: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0px 50px 0px;
+  color: #aa151b;
+}
+
+@media screen and (max-width: 600px) {
+ header {
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 35px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    /*align-items: center; */
+  }
+
+   nav {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 10px;
+
+
+  }
+
+
+  ul {
+    /* max-width: 100%; */
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #presentation {
+    max-width: 85%;
+  }
+
+  #presentation li {
+    width: 80%;
+    margin: 5px;
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  #presentation li:nth-child(1) {
+    align-self: center;
+  }
+
+  #presentation li:nth-child(2) {
+    align-self: center;
+  }
+  
+  #presentation li:nth-child(3) {
+    align-self: center;
+  }
+
+  #cakes {
+    flex-direction: column;
+  }
+  
+  #cakes div {
+    margin: 10px;
+  }
+
+  #cakes div img {
+    width: 260px;
+  }
+
+  footer {
+    max-width: 80%;
+    margin: 50px auto;
+  }
+}
